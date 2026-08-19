@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 
 String connectionString = builder.Configuration.GetConnectionString("Default") ?? throw new ArgumentNullException("Connection string is Null.");
-builder.Services.AddDbContext<AppDbContext>(op => op.UseSqlite(connectionString));
+builder.Services.AddDbContext<AppDbContext>(op => op.UseNpgsql(connectionString));
 var app = builder.Build();
 
 app.UseCors(MyAllowSpecificOrigins);
