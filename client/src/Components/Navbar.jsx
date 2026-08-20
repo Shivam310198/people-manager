@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    
-    
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -25,25 +25,19 @@ const Navbar = () => {
                             <NavLink
                                 to='/'
 
-                                    className={({isActive}) => `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive
+                                className={({ isActive }) => `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive
                                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
                                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                                     }`}
 
                             >
-                                Home <p>
-                                Open side menu, if using mobile phone, by clicking the hamburger icon on the top right corner of the page. Navigate to the "Person" page to view the list of people. You can add, edit, or delete people from this page. The "About" page provides information about the application and its features.
-                            </p>
-                            <p>
-                                OR</p>
-                            <p>
-                                Use the navigation links above to switch between the Home, About, and Person pages. The active link will be highlighted with a gradient background for better visibility.
-                            </p>
+                                Home
+                                 
                             </NavLink>
                             <NavLink
                                 to='/about'
 
-                                className={({isActive})=>`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive
+                                className={({ isActive }) => `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive
                                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
                                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                                     }`}
@@ -54,7 +48,7 @@ const Navbar = () => {
                             <NavLink
                                 to='/person'
 
-                                className={({isActive})=>`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive
+                                className={({ isActive }) => `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive
                                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
                                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                                     }`}
@@ -92,7 +86,7 @@ const Navbar = () => {
                 <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-50 border-t border-gray-200">
                     <NavLink
                         to="/"
-                        className={({isActive})=>`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${isActive
+                        className={({ isActive }) => `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${isActive
                             ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md transform scale-105'
                             : 'text-gray-700 hover:text-blue-600 hover:bg-white hover:shadow-sm'
                             }`}
@@ -102,7 +96,7 @@ const Navbar = () => {
 
                     <NavLink
                         to="/about"
-                        className={({isActive})=>`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${isActive
+                        className={({ isActive }) => `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${isActive
                             ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md transform scale-105'
                             : 'text-gray-700 hover:text-blue-600 hover:bg-white hover:shadow-sm'
                             }`}
@@ -112,12 +106,12 @@ const Navbar = () => {
 
                     <NavLink
                         to="/person"
-                        className={({isActive})=>`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${isActive
+                        className={({ isActive }) => `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${isActive
                             ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md transform scale-105'
                             : 'text-gray-700 hover:text-blue-600 hover:bg-white hover:shadow-sm'
                             }`}
                     >
-                           
+
                         Person
                     </NavLink>
                 </div>
