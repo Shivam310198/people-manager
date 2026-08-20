@@ -8,7 +8,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader(); // x-pagination-header
+                          policy.WithOrigins("http://localhost:5173","https://people-manager-2.onrender.com").AllowAnyMethod().AllowAnyHeader(); // x-pagination-header
                       });
 });
 
